@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{57A9AA56-7AEF-487D-BED8-10D637690CAB}</ProjectGuid>
+    <RootNamespace>millionsdk</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>../output/debug/</OutDir>
+    <IntDir>../intermediate/debug/cheat/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../output/release/</OutDir>
+    <IntDir>../intermediate/release/cheat/</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PreprocessorDefinitions>_WINDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;ole32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_WINDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>user32.lib;kernel32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>mfcs90u.lib;ole32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;Ole32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cheat\features\aimbot.cpp" />
+    <ClCompile Include="cheat\features\bt.cpp" />
+    <ClCompile Include="cheat\features\events.cpp" />
+    <ClCompile Include="cheat\features\fake_backwards.cpp" />
+    <ClCompile Include="cheat\features\hitmarkers.cpp" />
+    <ClCompile Include="cheat\features\jump_stats.cpp" />
+    <ClCompile Include="cheat\features\misc.cpp" />
+    <ClCompile Include="cheat\features\movement.cpp" />
+    <ClCompile Include="cheat\features\nade_prediction.cpp" />
+    <ClCompile Include="cheat\features\pred.cpp" />
+    <ClCompile Include="cheat\features\skins.cpp" />
+    <ClCompile Include="cheat\features\triggerbot.cpp" />
+    <ClCompile Include="cheat\features\vel_graph.cpp" />
+    <ClCompile Include="cheat\features\visuals.cpp" />
+    <ClCompile Include="cheat\features\walkbot.cpp" />
+    <ClCompile Include="cheat\gui\interface.cpp" />
+    <ClCompile Include="cheat\hooks\functions\client_cmd.cpp" />
+    <ClCompile Include="cheat\hooks\functions\create_move.cpp" />
+    <ClCompile Include="cheat\hooks\functions\dispatch_user_message.cpp" />
+    <ClCompile Include="cheat\hooks\functions\draw_model_execute.cpp" />
+    <ClCompile Include="cheat\hooks\functions\emit_sound.cpp" />
+    <ClCompile Include="cheat\hooks\functions\frame_stage_notify.cpp" />
+    <ClCompile Include="cheat\hooks\functions\get_color_modulation.cpp" />
+    <ClCompile Include="cheat\hooks\functions\is_using_static_prop_debug_modes.cpp" />
+    <ClCompile Include="cheat\hooks\functions\lock_cursor.cpp" />
+    <ClCompile Include="cheat\hooks\functions\on_screen_size_change.cpp" />
+    <ClCompile Include="cheat\hooks\functions\send_net_msg.cpp" />
+    <ClCompile Include="cheat\hooks\hooks.cpp" />
+    <ClCompile Include="cheat\hooks\functions\paint_traverse.cpp" />
+    <ClCompile Include="cheat\input\input.cpp" />
+    <ClCompile Include="cheat\renderer\renderer.cpp" />
+    <ClCompile Include="engine\interfaces\model_render.hpp" />
+    <ClCompile Include="engine\netvars\netvars.cpp" />
+    <ClCompile Include="engine\utilities\config.cpp" />
+    <ClCompile Include="engine\utilities\engine.cpp" />
+    <ClCompile Include="engine\utilities\memory.cpp" />
+    <ClCompile Include="million.cpp" />
+    <ClCompile Include="nav\micropather.cpp" />
+    <ClCompile Include="nav\nav_area.cpp" />
+    <ClCompile Include="nav\nav_buffer.cpp" />
+    <ClCompile Include="nav\nav_file.cpp" />
+    <ClCompile Include="nav\nav_hiding_spot.cpp" />
+    <ClCompile Include="protection\protection.cpp" />
+    <ClCompile Include="source engine\math\vector3d.cpp" />
+    <ClCompile Include="tcp\client.cpp" />
+    <ClCompile Include="tcp\tcp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cheat\cheat.hpp" />
+    <ClInclude Include="cheat\features\aimbot.hpp" />
+    <ClInclude Include="cheat\features\bt.hpp" />
+    <ClInclude Include="cheat\features\events.hpp" />
+    <ClInclude Include="cheat\features\fake_backwards.hpp" />
+    <ClInclude Include="cheat\features\hitmarkers.hpp" />
+    <ClInclude Include="cheat\features\jump_stats.hpp" />
+    <ClInclude Include="cheat\features\misc.hpp" />
+    <ClInclude Include="cheat\features\knife.hpp" />
+    <ClInclude Include="cheat\features\movement.hpp" />
+    <ClInclude Include="cheat\features\nade_prediction.hpp" />
+    <ClInclude Include="cheat\features\pred.hpp" />
+    <ClInclude Include="cheat\features\skins.hpp" />
+    <ClInclude Include="cheat\features\triggerbot.hpp" />
+    <ClInclude Include="cheat\features\vel_graph.hpp" />
+    <ClInclude Include="cheat\features\visuals.hpp" />
+    <ClInclude Include="cheat\features\walkbot.hpp" />
+    <ClInclude Include="cheat\gui\gui.hpp" />
+    <ClInclude Include="cheat\hooks\holy_hook.hpp" />
+    <ClInclude Include="cheat\hooks\hooks.hpp" />
+    <ClInclude Include="cheat\input\input.hpp" />
+    <ClInclude Include="cheat\renderer\renderer.hpp" />
+    <ClInclude Include="cheat\renderer\textures.hpp" />
+    <ClInclude Include="engine\interfaces\client.hpp" />
+    <ClInclude Include="engine\interfaces\client_state.hpp" />
+    <ClInclude Include="engine\interfaces\debug_overlay.hpp" />
+    <ClInclude Include="engine\interfaces\engine.hpp" />
+    <ClInclude Include="engine\interfaces\engine_trace.hpp" />
+    <ClInclude Include="engine\interfaces\entity_list.hpp" />
+    <ClInclude Include="engine\interfaces\globals.hpp" />
+    <ClInclude Include="engine\interfaces\glow_object_manager.hpp" />
+    <ClInclude Include="engine\interfaces\hud_chat.hpp" />
+    <ClInclude Include="engine\interfaces\interfaces.hpp" />
+    <ClInclude Include="engine\interfaces\i_console.hpp" />
+    <ClInclude Include="engine\interfaces\i_localize.hpp" />
+    <ClInclude Include="engine\interfaces\material_system.hpp" />
+    <ClInclude Include="engine\interfaces\model_info_client.hpp" />
+    <ClInclude Include="engine\interfaces\panel.hpp" />
+    <ClInclude Include="engine\interfaces\surface.hpp" />
+    <ClInclude Include="engine\interfaces\weapon_system.hpp" />
+    <ClInclude Include="engine\netvars\netvars.hpp" />
+    <ClInclude Include="engine\utilities\config.hpp" />
+    <ClInclude Include="engine\utilities\engine.hpp" />
+    <ClInclude Include="engine\utilities\fnv.hpp" />
+    <ClInclude Include="engine\utilities\crypto.hpp" />
+    <ClInclude Include="engine\utilities\math.hpp" />
+    <ClInclude Include="engine\utilities\memory.hpp" />
+    <ClInclude Include="engine\utilities\xorstring.hpp" />
+    <ClInclude Include="global_ctx.hpp" />
+    <ClInclude Include="nav\micropather.h" />
+    <ClInclude Include="nav\nav_area.h" />
+    <ClInclude Include="nav\nav_buffer.h" />
+    <ClInclude Include="nav\nav_file.h" />
+    <ClInclude Include="nav\nav_hiding_spot.h" />
+    <ClInclude Include="nav\nav_structs.h" />
+    <ClInclude Include="protection\protection.hpp" />
+    <ClInclude Include="source engine\classes\anim_layers.hpp" />
+    <ClInclude Include="source engine\classes\client_class.hpp" />
+    <ClInclude Include="source engine\classes\collideable.hpp" />
+    <ClInclude Include="source engine\classes\convar.hpp" />
+    <ClInclude Include="source engine\classes\c_usercmd.hpp" />
+    <ClInclude Include="source engine\classes\entities.hpp" />
+    <ClInclude Include="source engine\classes\gameevent.hpp" />
+    <ClInclude Include="source engine\classes\key_values.hpp" />
+    <ClInclude Include="source engine\classes\net_message.hpp" />
+    <ClInclude Include="source engine\classes\prediction.hpp" />
+    <ClInclude Include="source engine\classes\recv_props.hpp" />
+    <ClInclude Include="source engine\classes\studio.hpp" />
+    <ClInclude Include="source engine\math\point.hpp" />
+    <ClInclude Include="source engine\math\vector2d.hpp" />
+    <ClInclude Include="source engine\math\vector3d.hpp" />
+    <ClInclude Include="source engine\misc\frame_stages.hpp" />
+    <ClInclude Include="source engine\sdk.hpp" />
+    <ClInclude Include="source engine\structs\dlight.hpp" />
+    <ClInclude Include="source engine\structs\materials.hpp" />
+    <ClInclude Include="source engine\structs\models.hpp" />
+    <ClInclude Include="source engine\structs\vertex_t.hpp" />
+    <ClInclude Include="source engine\structs\weaponinfo.hpp" />
+    <ClInclude Include="tcp\client.hpp" />
+    <ClInclude Include="tcp\packets.hpp" />
+    <ClInclude Include="tcp\tcp.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
